@@ -7,13 +7,15 @@ using NUnit.Framework;
 
 namespace TestingWithNunit.Tests
 {
-    internal class MyFirstNunitTests
+    public class MyFirstNunitTests
     {
+        private const bool Actual = true;
+
         [Test]
         public Task IAmDoingGreat()
         {
             Console.WriteLine("See you in the test output!");
-            Assert.True(true);
+            Assert.That(Actual, Is.True);
             return Task.CompletedTask;
         }
     }
